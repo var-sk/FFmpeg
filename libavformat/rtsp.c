@@ -1276,6 +1276,7 @@ start:
                                               reply->session_id);
         } else {
             snprintf(buf, sizeof(buf), "RTSP/1.0 501 Not Implemented\r\n");
+
             av_strlcatf(buf, sizeof(buf), "CSeq: 65535\r\n");
         }
         av_strlcat(buf, "\r\n", sizeof(buf));
